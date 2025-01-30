@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nodelist</title>
+</head>
+<style>
+    body{background-color:black;
+    color:white}
+
+    
+</style>
+<body>
+    <div class="container">
+        <h1 id="blank" class="heading">hey guyzz !</h1>
+
+        <h1 id="title" class="heading">Learning Dom
+            <span style="display:none"> hidden</span></h1>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <input type="password" name="nibtaunga" id="p">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+    </div>
+<script>
+  /* let title=document.getElementById('title')  //getElementBy method
+   console.log(title);
+   title.style.backgroundColor='blue'
+   console.log(title.innerText)
+   console.log(title.textContent)
+   console.log(title.innerHTML)
+
+   let heading=document.getElementsByClassName('heading');
+   console.log(heading);
+   heading[1].style.backgroundColor='orange' //not-working */
+
+   let query=document.querySelector('ul')  //Queryselector method
+   query.style.backgroundColor='green'
+   console.log(query)
+
+   let insideQuery=document.querySelectorAll('li')
+   console.log(insideQuery);
+
+   insideQuery.forEach( (x)=>{x.style.color='black'})
+   insideQuery[1].style.color='pink'
+
+  console.log(Array.from(insideQuery)) //converting nodelist to array
+</script>   
+</body>
+</html>

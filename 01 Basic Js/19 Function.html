@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 style="text-align:center;" >Functions!</h2>
+    <h3 style="color:rgb(10, 123, 118)">codes in console</h3>
+    <p id="modification">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, cumque.</p>
+
+<script>
+
+function addtwoNumber(num1,num2){
+    return num1+num2;
+    }
+addtwoNumber(3,5); //not returning value in console
+const result=addtwoNumber(3,5);
+// console.log(`result:${result}`)
+
+function calculateCartPrice(val1, val2,...num1){
+    return num1
+}
+//  console.log(calculateCartPrice(200, 400, 2000,5000));
+
+const user={
+    name:"sourabh",
+    age:18,
+}
+function niBtaunga(abc){
+    console.log(`applicant is ${abc.name} & age is ${abc.age}`)
+}
+// niBtaunga(user); //passing object to a function
+
+// niBtaunga({
+//     name:"sourabh",
+//     age:18,
+// })
+
+//    Scope in Function *  //
+
+console.log(addone(9))  //HOISTING in function
+function addone(num){
+    return num + 1
+}
+
+// console.log(addTwo(5));  //here hoisting does not work bcoz of equation
+const addTwo = function(num){
+    return num + 2
+}
+console.log(addTwo(5))
+</script>    
+</body>
+</html>

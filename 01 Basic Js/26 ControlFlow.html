@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 style="text-align:center;" >Control Flow !!</h2>
+    <h3 style="color:rgb(10, 123, 118)">codes in console</h3>
+    <p id="modification">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, cumque.</p>
+
+<script>
+ 
+/*let month="may";    //switch statement
+
+ switch (month) {
+    case "january":
+        console.log(`1 month`);
+        break;
+    case "february":
+        console.log(`2nd month`);
+        break;
+    case "march":
+        console.log(`3 month`);
+        break;
+ 
+    default:
+        console.log(`not found!!`)
+        break;
+ }*/
+
+ // Truthy & Falsy
+
+ const userEmail=[];
+ const emptyObject={};
+
+ console.log(Object.keys(emptyObject))   //important
+ console.log(userEmail);
+ console.log(userEmail.length) //length in array
+ console.log(Object.keys(emptyObject).length) //length in Object
+ console.log(emptyObject.length) //undefined
+
+if(userEmail){    //truthy values
+    console.log(`got user email`);
+}else{console.log(`no user input`)};
+
+if(emptyObject.length===0){    // falsy values
+    console.log(`got user object`);
+}else{console.log(`no user input`)}
+
+//Nullish Coalesing Operator
+let val1;
+val1=undefined??10;
+console.log(val1);
+
+//terniary operator
+
+const price=150
+price>150 ? console.log(`true`):console.log(`false`)
+
+
+
+
+</script>    
+</body>
+</html>
