@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /*function fetchUserdata(){
+            return new Promise( (resolve,reject)=>{
+
+                setTimeout( ()=>{
+                    resolve({name:"sourabh",url:"https://chaicode.com"})
+                    
+                },2000)
+            })
+        }
+
+        async function getUserdata(){
+            try {
+                console.log("fetching user data...")
+                const userdata=await fetchUserdata()
+                console.log("user data fetched succesfully") // this shows await holds data until it get into database
+                console.log("user:" ,userdata)
+            } catch (error) {
+                console.log("error fetching data",error)
+            }
+        }
+
+        getUserdata();*/
+
+        function fetchPostdata(){
+            return new Promise( (resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("post data fetched")
+                },2000);
+            })
+        }
+
+        function fetchCommentdata(){
+            return new Promise( (resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("comment data fetched succesfully")
+                },4000);
+            })
+        }
+
+        async function getBlogdata(){
+            try {
+                console.log("fethching blog data");
+
+                // const first = await fetchPostdata();
+                // const second= await fetchCommentdata();
+               const [first, second ] = await Promise.all([
+                fetchPostdata(),
+                fetchCommentdata(),
+            ])
+                
+                console.log(first)
+                console.log(second)
+
+                console.log('fetch compltee')
+                
+            } catch (error) {
+                console.error("error fetching blog data",error)
+            }
+        }
+
+        getBlogdata();
+    </script>
+</body>
+</html>

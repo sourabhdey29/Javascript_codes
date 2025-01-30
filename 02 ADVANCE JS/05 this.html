@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const person={
+        name:"sourabh",
+        greet(){
+            console.log(`hi, i am ${this.name}`)
+        }
+     }
+     person.greet();
+
+     const greetFunction=person.greet
+     greetFunction();
+
+     const boundGreet= person.greet.bind(person)
+     boundGreet();
+
+     //bind,call,apply
+    </script>
+</body>
+</html>

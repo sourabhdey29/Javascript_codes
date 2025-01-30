@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hey</h1>
+    <ul id="parent">
+        <li class="child">heyy</li>
+        <li class="child">hiie</li>
+    </ul>
+
+<script>
+
+let msg=function(greet){
+    let msg=document.createElement("li")
+    msg.className='child'
+    msg.appendChild(document.createTextNode(greet))
+
+   return document.querySelector('ul').appendChild(msg)
+}
+msg("hello")
+msg('fuckroo')
+let func =document.querySelector('ul')
+console.log(func.children)
+</script>    
+</body>
+</html>

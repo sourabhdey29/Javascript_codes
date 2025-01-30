@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">constructor function and errors</h1>
+<script>
+
+   function car(company, model){  //constructor function
+    this.company=company;
+    this.model=model;
+   }
+   let myCar= new car("tata","altroz")
+//    console.log(myCar);
+
+   function Tea(type){
+    this.type=type;
+    this.describe=function(){return `this is a ${this.type}`} 
+   }
+   let myTea=new Tea("green tea");
+//    console.log(myTea);
+
+// prototype for [ function to function ]
+
+ function animal(species){
+    this.species=species;
+ }
+ animal.prototype.sounds=function(){        //prototypal chain 
+    return `${this.species} makes a sound`
+ }
+
+ let myAnimal=new animal('dog');
+//  console.log(myAnimal.sounds());
+
+// Errors handling
+
+function Drink(name){
+    if(!new.target){
+        throw new Error("you forgot to add new keyword !");
+        
+    }
+    this.name=name;
+}
+let tea = new Drink('tea')
+let cofee= new Drink('coffee')
+
+console.log(tea);
+
+</script>    
+</body>
+</html>

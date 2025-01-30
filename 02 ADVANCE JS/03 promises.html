@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+     function fetchdata(){
+        return new Promise((resolve,reject)=>{
+
+            setTimeout(() => {
+                let success=true;
+
+                if(success){
+                    resolve("data fetched succesfully")
+                }else{
+                    reject("data is having some errors")
+                }
+                
+            }, 2000);
+        })
+     }
+
+    //  let response= fetchdata();   not of use
+    //  console.log(response)
+
+    fetchdata()
+        .then( (data)=>{          //it catches resolve part
+            console.log(data)
+        })
+        .catch( (data)=>{         //it catches reject part
+            console.error(data)
+        })
+
+
+    </script>
+</body>
+</html>

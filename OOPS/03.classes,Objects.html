@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center;">classes and objects</h1>
+
+<script>
+
+let arr=[1,2,3,];
+
+Array.prototype.custom=function(){ //protype in [Array to function]
+    return `custom method ${this}`
+} 
+
+let array=[1,2,3,4,5];
+
+// console.log(arr.custom())
+// console.log(array.custom())
+
+
+
+let car ={                   // [Objects]
+    company:"tata",
+    model:"nano",
+    year:2000,
+    start: function(){
+        return `${this.model} got started in ${this.year}`;
+    }
+}
+// console.log(car.start())
+
+class vehicle{                   // [Class]  // it uses constructor keyword
+    constructor(company,model){
+        this.company=company
+        this.model=model
+    }
+
+    start(){
+        return `${this.model} is a car from ${this.company}`
+    }
+}
+
+let myCar= new vehicle("tata","nano")
+// console.log(myCar.start())
+
+class auto extends vehicle{ // [Inheritance]  //it uses extends keyword
+
+    drive(){
+        return `${this.company} is mine favourite`
+    }
+}
+
+let anotherCar= new auto("tata","nano")
+// console.log(anotherCar.drive())
+
+</script>    
+</body>
+</html>

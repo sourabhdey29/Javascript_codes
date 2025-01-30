@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">Encapsulation , Polymorphism , Abstraction</h1>
+
+
+<script>
+
+// [Encapsulation]
+
+class bankAccount{
+
+    #balance=0;
+
+    deposit(amount){
+        this.#balance += amount;
+        return `${this.#balance}`
+    }
+
+    getBalance(){
+        return `$ ${this.#balance}`
+    }
+}
+let account=new bankAccount();
+// console.log(account.getBalance());
+
+//[Abstraction]
+
+class machine{
+
+    start(){
+        return `starting machine.....`
+    }
+
+    mixing(){
+        return `mixing the cofee`
+    }
+
+    button(){
+        
+        return `${this.start()}
+         ${this.mixing()}`
+    }
+}
+
+let myMachine=new machine();
+// console.log(myMachine.button())
+
+//[Polymorphism]
+
+class bird{
+    fly(){
+        return "flying..."
+    }
+}
+
+class penguin extends bird{
+    fly(){
+        return `penguing can't fly !`
+    }
+}
+
+let sparrow= new bird();
+let Penguin= new penguin()
+// console.log(sparrow.fly())
+// console.log(Penguin.fly())
+
+// STATIC METHODS"
+
+class calculator{
+
+    static add(a,b){
+        return a+b;
+    }
+}
+// let miniCalc= new calculator();  //not possible by this way
+// console.log(miniCalc.add(2,3))
+
+console.log( calculator.add(2,5));
+
+</script>
+
+</body>
+</html>

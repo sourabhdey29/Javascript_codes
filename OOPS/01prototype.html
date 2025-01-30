@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+  <h1 style="text-align:center">protype in javascript</h1>  
+    
+    
+<script>
+   let computer={cpu:12}
+   let lenovo={ 
+    screen:"HD",
+    // __proto__:computer,
+
+   } 
+// console.log(lenovo.__proto__)
+
+  Object.setPrototypeOf(lenovo, computer) //another method of setting proto //but object to object
+  
+  console.log(Object.getPrototypeOf(lenovo));
+  console.log(lenovo.hasOwnProperty("computer"));
+    
+</script>
+</body>
+</html>
